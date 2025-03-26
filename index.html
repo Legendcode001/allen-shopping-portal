@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allen Shopping Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1> Allen's Shop 🛒</h1>
+    <div class="cart-header">
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span class="cart-count" id="cart-count">0</span>
+        </div>
+        <div id="cart-dropdown" class="cart-dropdown"></div>
+        <button id="checkout" onclick="proceedToCheckout()">💳 Checkout</button>
+    </div>
+</header>
+
+<section class="shop">
+    <h2>Available Products</h2>
+    <div class="product-list">
+        <div class="product">
+            <img src="laptop.jpg" alt="Laptop">
+            <h3>Laptop</h3>
+            <p>#500</p>
+            <button class="add-to-cart" onclick="addToCart('Laptop', 500)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="phone.jpg" alt="Smartphone">
+            <h3>Smartphone</h3>
+            <p>#300</p>
+            <button class="add-to-cart" onclick="addToCart('Smartphone', 300)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<div id="message-box" class="message-box"></div>
+
+<!-- Footer Section -->
+<footer>
+    <p>Follow us on:</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank">📘 Facebook</a>
+        <a href="https://www.instagram.com" target="_blank">📷 Instagram</a>
+        <a href="https://twitter.com" target="_blank">🐦 Twitter</a>
+        <a href="https://www.linkedin.com" target="_blank">🔗 LinkedIn</a>
+    </div>
+    <p>&copy; Designed by <strong>Legendcode</strong></p>
+</footer>
+
+</body>
+</html>
