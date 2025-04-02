@@ -1,3 +1,4 @@
+// ==================== CART FUNCTIONALITY ====================
 let cart = [];
 const cartCount = document.getElementById("cart-count");
 const cartDropdown = document.getElementById("cart-dropdown");
@@ -41,4 +42,23 @@ function proceedToCheckout() {
         localStorage.setItem("cart", JSON.stringify(cart));
         window.location.href = "checkout.html";
     }
+}
+
+// ==================== SEARCH FUNCTIONALITY ====================
+function searchProduct() {
+    let input = document.getElementById("search-input").value.toLowerCase();
+    let products = document.querySelectorAll(".product");
+    let found = false;
+    
+    products.forEach(product => {
+        let title = product.querySelector("h3").innerText.toLowerCase();
+        if (title.includes(input)) {
+            product.style.display = "block";
+            found = true;
+        } else {
+            product.style.display = "none";
+        }
+    });
+
+    document.getElementById("no-results").style.display = found ? "none" : "block";
 }

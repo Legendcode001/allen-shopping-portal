@@ -10,7 +10,11 @@
 <body>
 
 <header>
-    <h1> Allen's Shop 🛒</h1>
+    <h1>Allen's Shop 🛒</h1>
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for products...">
+        <button onclick="searchProduct()">Search</button>
+    </div>
     <div class="cart-header">
         <div class="cart-icon" onclick="toggleCart()">
             🛒 <span class="cart-count" id="cart-count">0</span>
@@ -57,7 +61,7 @@
             <img src="trowel.jpeg" alt="Power Trowel">
             <h3>Power Trowel</h3>
             <p>#550</p>
-            <button class="add-to-cart" onclick="addToCart('Power Trowel', 550)">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Power Trowel', 550)">Add to Cart</button> 
         </div>
         <div class="product">
             <img src="acrow.jpeg" alt="Acrow-props">
@@ -127,6 +131,8 @@
     </div>
     <p>&copy; Designed by <strong>Legendcode</strong></p>
 </footer>
+
+<p id="no-results" style="display:none; color: red;">Product not found</p>
 
 </body>
 </html>
